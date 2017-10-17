@@ -11,12 +11,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import java.util.Set;
 import java.util.HashSet;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
     Set<String> myset = new HashSet<String>();
     Set<String> mylist = new HashSet<String>();
     String currentAns = "";
+    String diff = "";
     int correctCount = 0;
     TextView ans;
     TextView cor;
@@ -24,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Bundle extras  = getIntent().getExtras();
+        diff = extras.getString("diff");
+
+        TextView ins = (TextView) findViewById(R.id.instructions);
+        ins.setText(diff + " MODE\nCreate a Word Using your letter bank!");
 
         AssetManager a = getAssets();
         try {
@@ -65,5 +73,20 @@ public class MainActivity extends AppCompatActivity {
             currentAns = "";
             ans.setText(currentAns);
         }
+    }
+
+    public void goToAbout(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToResults(View view) {
+        Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
+
+        intent.putExtra("diff", diff);
+        intent.putExtra("score", "" + correctCount);
+
+        startActivity(intent);
     }
 }

@@ -11,7 +11,8 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
-        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Create a Word Using your letter bank!"/>
+        <TextView android:id ="@+id/instructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Create a Word Using your letter bank!"/>
+        <TextView android:id ="@+id/correct" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Correct words: 0"/>
         <TextView android:id ="@+id/answer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="TestWord"/>
         <LinearLayout
             android:layout_width="fill_parent"
@@ -32,7 +33,12 @@
             <Button android:text="H" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
         </LinearLayout>
         <Button android:text="Enter" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="15sp" android:onClick="evalClk"/>
-        <TextView android:id ="@+id/correct" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Correct words: 0"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button android:text="Finish" android:layout_width="fill_parent" android:layout_weight="1" android:layout_height="wrap_content" android:onClick="goToResults"/>
+            <Button android:text="About" android:layout_width="fill_parent" android:layout_weight="1" android:layout_height="wrap_content" android:onClick="goToAbout" />
+        </LinearLayout>
 
     </LinearLayout>
 
