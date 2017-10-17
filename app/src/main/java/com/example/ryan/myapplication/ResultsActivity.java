@@ -13,12 +13,13 @@ public class ResultsActivity extends AppCompatActivity {
 
         Bundle extras  = getIntent().getExtras();
         String diff = extras.getString("diff");
-        String correct = extras.getString("score");
+        String correct = extras.getString("numberFound");
+        String attempts = extras.getString("numberAttempted");
 
         TextView message = (TextView) findViewById(R.id.message);
         message.setText("You played: " + diff + " MODE");
 
         TextView number = (TextView) findViewById(R.id.correct);
-        number.setText("And you managed to find " + correct + " correct words!");
+        number.setText("And you managed to find " + correct + " correct words\n with " + attempts + "attempts!");
     }
 }

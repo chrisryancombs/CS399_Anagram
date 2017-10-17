@@ -1,45 +1,444 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ryan.myapplication.MainActivity">
+    android:background="#66ccff"
+    tools:context="com.example.ryan.myapplication.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+    >
 
-    <LinearLayout
+
+
+    <Button
+        android:id="@+id/easyButton1"
+        android:background="#0073e5"
+        android:layout_width="71dp"
+        android:layout_height="75dp"
+        android:text="A"
+        android:onClick="buttonClickAppend"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <Button
+        android:id="@+id/easyButton2"
+        android:background="#0073e5"
+        android:layout_width="71dp"
+        android:layout_height="75dp"
+        android:text="A"
+        android:onClick="buttonClickAppend"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <Button
+        android:id="@+id/easyButton3"
+        android:background="#0073e5"
+        android:layout_width="71dp"
+        android:layout_height="75dp"
+        android:text="H"
+        android:visibility="gone"
+        android:onClick="buttonClickAppend"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.635"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+
+    <Button
+        android:id="@+id/easyButton4"
+        android:background="#0073e5"
+        android:layout_width="71dp"
+        android:layout_height="75dp"
+        android:text="S"
+        android:onClick="buttonClickAppend"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <TextView
+        android:id="@+id/easySlot"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#f5f5f5"
+        android:text=""
+        android:textSize="55sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
 
-        <TextView android:id ="@+id/instructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Create a Word Using your letter bank!"/>
-        <TextView android:id ="@+id/correct" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Correct words: 0"/>
-        <TextView android:id ="@+id/answer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="TestWord"/>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <Button android:text="F" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-            <Button android:text="U" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-            <Button android:text="C" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-            <Button android:text="K" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <Button android:text="Y" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-            <Button android:text="O" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-            <Button android:text="U" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-            <Button android:text="H" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="letterClk"/>
-        </LinearLayout>
-        <Button android:text="Enter" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="15sp" android:onClick="evalClk"/>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            <Button android:text="Finish" android:layout_width="fill_parent" android:layout_weight="1" android:layout_height="wrap_content" android:onClick="goToResults"/>
-            <Button android:text="About" android:layout_width="fill_parent" android:layout_weight="1" android:layout_height="wrap_content" android:onClick="goToAbout" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/wordEntry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="WORD ENTRY: "
+        android:textSize="20sp"
+        android:textColor="#f5f5f5"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/wordBank"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f5f5"
+        android:gravity="center"
+        android:text="WORD BANK: "
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
 
-</android.widget.LinearLayout>
+    <TextView
+        android:id="@+id/wordsfound"
+        android:textColor="#f5f5f5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Words found: 0"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.52" />
+
+    <TextView
+        android:id="@+id/construct"
+        android:layout_width="286dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:textColor="#f5f5f5"
+        android:text="CONSTRUCT A WORD!"
+        android:background="#0073e5"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.034"
+        tools:layout_editor_absoluteY="14dp" />
+
+    <TextView
+        android:id="@+id/attempts"
+        android:textColor="#f5f5f5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Attempts: 0"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintVertical_bias="0.159" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f5f5"
+        android:text="ENTER"
+        android:onClick="enterClicked"
+        android:background="#0073e5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872"
+        app:layout_constraintRight_toLeftOf="@+id/reset"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f5f5"
+        android:text="FINISH"
+        android:onClick="goToResults"
+        android:background="#0073e5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872"
+        app:layout_constraintLeft_toRightOf="@+id/reset"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f5f5f5"
+        android:text="RESET GUESS"
+        android:background="#0073e5"
+        android:onClick="resetClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872" />
+
+    <Button
+        android:id="@+id/normalButton1"
+        android:background="#0073e5"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+
+    <Button
+        android:id="@+id/normalButton2"
+        android:layout_width="56dp"
+        android:background="#0073e5"
+        android:layout_height="60dp"
+        android:text="A"
+        android:onClick="buttonClickAppend"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+
+    <Button
+        android:id="@+id/normalButton4"
+        android:background="#0073e5"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/normalButton3"
+        android:background="#0073e5"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/normalButton5"
+        android:background="#0073e5"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/normalButton6"
+        android:background="#0073e5"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/hardButton1"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707"
+        tools:layout_editor_absoluteX="326dp" />
+
+    <Button
+        android:id="@+id/hardButton2"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/hardButton3"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/hardButton4"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/hardButton5"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/hardButton6"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/hardButton7"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+    <Button
+        android:id="@+id/hardButton8"
+        android:background="#0073e5"
+        android:layout_width="42dp"
+        android:layout_height="53dp"
+        android:onClick="buttonClickAppend"
+        android:text="A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.827"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0073e5"
+        android:onClick="goToAbout"
+        android:text="About"
+        android:textColor="#f5f5f5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997" />
+
+</android.support.constraint.ConstraintLayout>
